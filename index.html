@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <title>Gerador de QR Code | Carol</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="glass-card" aria-labelledby="page-title">
+      <div class="card-heading">
+        <span class="eyebrow">SUPERMERCADOS CAROL</span>
+        <h1 id="page-title">Gerador de QR Code</h1>
+        <p>Cole um link abaixo para gerar e baixar o QR Code em PNG.</p>
+      </div>
+
+      <form id="qr-form" novalidate>
+        <label for="link-input">Link</label>
+        <input
+          id="link-input"
+          name="link"
+          type="text"
+          inputmode="url"
+          autocomplete="url"
+          placeholder="https://exemplo.com.br"
+          aria-describedby="status-message"
+          required
+        >
+
+        <button id="generate-button" type="submit">
+          Gerar e baixar QR Code
+        </button>
+      </form>
+
+      <div id="qr-preview-wrapper" class="qr-preview-wrapper" hidden>
+        <div id="qr-preview" class="qr-preview" aria-label="Prévia do QR Code"></div>
+      </div>
+
+      <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+
+      <div id="qr-render" class="qr-render" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
