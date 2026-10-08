@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101010">
   <title>Gerador de QR Code | Carol</title>
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,7 +37,7 @@
       </form>
 
       <div id="qr-preview-wrapper" class="qr-preview-wrapper" hidden>
-        <div id="qr-preview" class="qr-preview" aria-label="Prévia do QR Code"></div>
+        <div id="qr-preview" class="qr-preview" aria-label="Prévia dos dois QR Codes"></div>
       </div>
 
       <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
@@ -44,7 +46,7 @@
     </section>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="vendor/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
